@@ -286,14 +286,14 @@ var app = new Vue({
         this.chime.play();
       }
 
-      var message = 'Scanned: '
+      var message = ''
         + content
         + '<a href="#" class="clipboard-copy" data-dismiss="snackbar" data-clipboard="'
         + escapeHtml(content)
         + '"><span class="icon icon-md">content_copy</span> Copy</a>';
 
       if (isHttpUrl) {
-        message += '<a href="'
+         '<a href="'
           + escapeHtml(content)
           + '" target="_blank" data-dismiss="snackbar">'
           + '<span class="icon icon-md">call_made</span> Open</a>';
