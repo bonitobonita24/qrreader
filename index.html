@@ -77,8 +77,8 @@
             <fieldset>
               <div class="form-group">
                 <div v-for="camera in cameras" class="radiobtn radiobtn-adv">
-                  <label for="camera-0">
-                    <input class="access-hide" id="camera-0" name="activeCamera" type="radio" :value="camera" v-model="activeCamera">
+                  <label for="camera-{{$index}}">
+                    <input class="access-hide" id="camera-{{$index}}" name="activeCamera" type="radio" :value="camera" v-model="activeCamera">
                     {{ camera.name }}
                     <span class="radiobtn-circle"></span><span class="radiobtn-circle-check"></span>
                   </label>
@@ -92,7 +92,7 @@
               <div class="form-group">
                 <div class="radiobtn radiobtn-adv">
                   <label for="link-current-tab">
-                    <input class="access-hide" id="link-current-tab" name="link" type="radio" value="current-tab" v-model="linkAction">
+                    <input class="access-hide active" id="link-current-tab" name="link" type="radio" value="current-tab" v-model="linkAction">
                     Open in current tab
                     <span class="radiobtn-circle"></span><span class="radiobtn-circle-check"></span>
                   </label>
