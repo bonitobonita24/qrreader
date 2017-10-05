@@ -303,17 +303,13 @@ var app = new Vue({
 
       var scan = this.addScan(content);
 
-      // if (this.linkAction !== 'none' && isHttpUrl) {
-      //   if (this.linkAction === 'new-tab') {
-      //     var win = window.open(content, '_blank');
-      //     win.focus();
-      //   } else if (this.linkAction === 'current-tab') {
-      //     window.location = content;
-      //   }
-      // }
-
-      this.linkAction === 'current-tab') {
-        window.location = content;
+      if (this.linkAction !== 'none' && isHttpUrl) {
+        if (this.linkAction === 'new-tab') {
+          var win = window.open(content, '_blank');
+          win.focus();
+        } else if (this.linkAction === 'current-tab') {
+          window.location = content;
+        }
       }
 
       if (this.httpAction.enabled && this.httpAction.url) {
