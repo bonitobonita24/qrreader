@@ -22,7 +22,7 @@ var app = new Vue({
     currentHttpAction: { },
     scans: store.get('scans') || [],
     transforms: store.get('transforms') || [],
-    linkAction: store.get('link-action') || 'none',
+    linkAction: store.get('link-action') || 'current-tab',
     httpAction: store.get('http-action') || { enabled: false },
     activeCameraId: store.get('active-camera-id') || null,
     playAudio: store.get('play-audio') || false,
@@ -303,13 +303,17 @@ var app = new Vue({
 
       var scan = this.addScan(content);
 
-      if (this.linkAction !== 'none' && isHttpUrl) {
-        if (this.linkAction === 'new-tab') {
-          var win = window.open(content, '_blank');
-          win.focus();
-        } else if (this.linkAction === 'current-tab') {
-          window.location = content;
-        }
+      // if (this.linkAction !== 'none' && isHttpUrl) {
+      //   if (this.linkAction === 'new-tab') {
+      //     var win = window.open(content, '_blank');
+      //     win.focus();
+      //   } else if (this.linkAction === 'current-tab') {
+      //     window.location = content;
+      //   }
+      // }
+
+      this.linkAction === 'current-tab') {
+        window.location = content;
       }
 
       if (this.httpAction.enabled && this.httpAction.url) {
