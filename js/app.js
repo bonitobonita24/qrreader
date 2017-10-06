@@ -22,7 +22,7 @@ var app = new Vue({
     currentHttpAction: { },
     scans: store.get('scans') || [],
     transforms: store.get('transforms') || [],
-    linkAction: store.get('link-action') || 'none',
+    linkAction: store.get('link-action') || 'current-tab',
     httpAction: store.get('http-action') || { enabled: false },
     activeCameraId: store.get('active-camera-id') || null,
     playAudio: store.get('play-audio') || false,
