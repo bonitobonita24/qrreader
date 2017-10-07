@@ -26,7 +26,8 @@ var app = new Vue({
     httpAction: store.get('http-action') || { enabled: false },
     activeCameraId: store.get('active-camera-id') || null,
     playAudio: store.get('play-audio') || false,
-    allowBackgroundScan: store.get('background-scan') || false
+    allowBackgroundScan: store.get('background-scan') || false,
+    mirror: false
   },
   methods: {
     start: function () {
