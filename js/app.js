@@ -15,7 +15,7 @@ var app = new Vue({
   data: {
     store: store,
     cameras: [],
-    activeCamera: camera-0,
+    activeCamera: null,
     chime: null,
     scanner: null,
     currentTransform: { },
@@ -24,7 +24,7 @@ var app = new Vue({
     transforms: store.get('transforms') || [],
     linkAction: store.get('link-action') || 'current-tab',
     httpAction: store.get('http-action') || { enabled: false },
-    activeCameraId: store.get('active-camera-id') || null,
+    activeCameraId: store.get('active-camera-id') || 0,
     playAudio: store.get('play-audio') || false,
     allowBackgroundScan: store.get('background-scan') || false
   },
