@@ -15,7 +15,7 @@ var app = new Vue({
   data: {
     store: store,
     cameras: [],
-    activeCamera: 0,
+    activeCamera: camera 0,
     chime: null,
     scanner: null,
     currentTransform: { },
